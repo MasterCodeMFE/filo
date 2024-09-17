@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
+/*   By: manuel <manuel@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 10:45:05 by manufern          #+#    #+#             */
-/*   Updated: 2024/09/17 17:12:41 by manufern         ###   ########.fr       */
+/*   Updated: 2024/09/17 20:54:54 by manuel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,7 @@ void* thread_function(void* arg) {
 }
 
 int main() {
-    pthread_t threads[20000];
+    pthread_t threads[200];
     thread_data_t data;
     
     // Inicializar la estructura
@@ -133,7 +133,7 @@ int main() {
     }
 
     // Crear los hilos
-    for (int i = 0; i < 20000; i++) {
+    for (int i = 0; i < 200; i++) {
         if (pthread_create(&threads[i], NULL, thread_function, &data) != 0) {
             perror("Thread creation failed");
             pthread_mutex_destroy(&data.mutex);
@@ -142,7 +142,7 @@ int main() {
     }
 
     // Esperar a que todos los hilos terminen
-    for (int i = 0; i < 20000; i++) {
+    for (int i = 0; i < 200; i++) {
         pthread_join(threads[i], NULL);
     }
 
