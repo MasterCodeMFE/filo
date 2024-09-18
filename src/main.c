@@ -6,7 +6,7 @@
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 10:45:05 by manufern          #+#    #+#             */
-/*   Updated: 2024/09/18 19:40:08 by manufern         ###   ########.fr       */
+/*   Updated: 2024/09/18 19:48:13 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,14 +50,17 @@ void *philosopher(void *arg)
 
         // Verificar si ha pasado demasiado tiempo desde la última comida
         pthread_mutex_lock(&filo->last_meal_mutex[philosopher_id]);
-        if (get_current_time_ms() - filo->last_meal_time[philosopher_id] > filo->time_to_die)
+        if (get_current_time_ms() - filo->last_meal_time[philosopher_id] > filo->time_to_die || filo->number_of_philosophers < 2)
         {
             // Si ha pasado más tiempo del permitido sin comer, el filósofo muere
-            pthread_mutex_lock(&filo->print);
-            filo->is_dead = 1; // Asegúrate de que la variable is_dead se actualiza
-            printf("💀 %ld %d has died 💀\n", timestamp - filo->init_program, philosopher_id + 1);
-            pthread_mutex_unlock(&filo->print);
-            pthread_mutex_unlock(&filo->last_meal_mutex[philosopher_id]);
+            if (filo->is_dead == 0)
+            {
+                filo->is_dead = 1; // Asegúrate de que la variable is_dead se actualiza
+                pthread_mutex_lock(&filo->print);
+                printf("💀 %ld %d has died 💀\n", timestamp - filo->init_program, philosopher_id + 1);
+                pthread_mutex_unlock(&filo->print);
+                pthread_mutex_unlock(&filo->last_meal_mutex[philosopher_id]);
+            }
             return (NULL); // Sale del ciclo, el filósofo ha muerto
         }
         pthread_mutex_unlock(&filo->last_meal_mutex[philosopher_id]);
