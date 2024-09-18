@@ -14,6 +14,10 @@ typedef struct s_filo
     pthread_t           *philos;
     pthread_mutex_t     print;
     pthread_mutex_t     *last_meal_mutex;
+    int                 is_dead;
+    pthread_mutex_t     dead_mutex;
+    pthread_mutex_t     id_mutex;
+    int                 philosopher_id;
+    long                init_program;
 }   t_filo;
-
 #endif

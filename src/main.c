@@ -6,7 +6,7 @@
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 10:45:05 by manufern          #+#    #+#             */
-/*   Updated: 2024/09/18 14:48:56 by manufern         ###   ########.fr       */
+/*   Updated: 2024/09/18 19:40:08 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,29 +24,29 @@ long get_current_time_ms()
 void *philosopher(void *arg)
 {
     t_filo *filo;
-    static int i = 0;
     int left_fork;
     int right_fork;
     long timestamp;
-    int	laps;
+    int laps;
 
     filo = (t_filo *)arg;
-	laps = 0;
-    int philosopher_id = i++;
+    laps = 0;
+
+    // Asignación segura de philosopher_id usando un mutex
+    pthread_mutex_lock(&filo->id_mutex);
+    int philosopher_id = filo->philosopher_id++;
+    pthread_mutex_unlock(&filo->id_mutex);
 
     left_fork = philosopher_id;
     right_fork = (philosopher_id + 1) % filo->number_of_philosophers;
-	if (filo->number_of_times_each_philosopher_must_eat == -1)
-		laps = -1;	
+
+    if (filo->number_of_times_each_philosopher_must_eat == -1)
+        laps = -1; // No hay límite en las veces que debe comer
+
     while (laps == -1 || laps < filo->number_of_times_each_philosopher_must_eat)
     {
         filo->eat = 0;
         timestamp = get_current_time_ms();
-
-        // Pensar
-        pthread_mutex_lock(&filo->print);
-        printf("🧑 %ld %d is thinking 🧑\n", timestamp, philosopher_id + 1);
-        pthread_mutex_unlock(&filo->print);
 
         // Verificar si ha pasado demasiado tiempo desde la última comida
         pthread_mutex_lock(&filo->last_meal_mutex[philosopher_id]);
@@ -54,12 +54,16 @@ void *philosopher(void *arg)
         {
             // Si ha pasado más tiempo del permitido sin comer, el filósofo muere
             pthread_mutex_lock(&filo->print);
-            printf("💀 %ld %d has died 💀\n", timestamp, philosopher_id + 1);
+            filo->is_dead = 1; // Asegúrate de que la variable is_dead se actualiza
+            printf("💀 %ld %d has died 💀\n", timestamp - filo->init_program, philosopher_id + 1);
             pthread_mutex_unlock(&filo->print);
             pthread_mutex_unlock(&filo->last_meal_mutex[philosopher_id]);
-            break;
+            return (NULL); // Sale del ciclo, el filósofo ha muerto
         }
         pthread_mutex_unlock(&filo->last_meal_mutex[philosopher_id]);
+
+        // Pensar
+        // No hay mutex necesario aquí, ya que no accede a recursos compartidos
 
         // Intentar tomar los tenedores
         if (philosopher_id % 2 == 0)
@@ -74,13 +78,16 @@ void *philosopher(void *arg)
         }
 
         // Comer
-        pthread_mutex_lock(&filo->print);
-        filo->eat = 1;
-        filo->last_meal_time[philosopher_id] = get_current_time_ms(); // Actualizar el tiempo de la última comida
-        printf("🍽️ %ld %d is eating 🍽️\n", filo->last_meal_time[philosopher_id], philosopher_id + 1);
-        pthread_mutex_unlock(&filo->print);
+        if (filo->is_dead == 0)
+        {
+            pthread_mutex_lock(&filo->print);
+            filo->eat = 1;
+            filo->last_meal_time[philosopher_id] = get_current_time_ms(); // Actualizar el tiempo de la última comida
+            printf("🍽️ %ld %d is eating 🍽️\n", filo->last_meal_time[philosopher_id] - filo->init_program, philosopher_id + 1);
+            pthread_mutex_unlock(&filo->print);
 
-        usleep(filo->time_to_eat * 1000); // Simular el tiempo comiendo
+            usleep(filo->time_to_eat * 1000); // Simular el tiempo comiendo
+        }
 
         // Dejar los tenedores
         pthread_mutex_unlock(&filo->forks[right_fork]);
@@ -88,13 +95,24 @@ void *philosopher(void *arg)
 
         // Dormir y repetir
         timestamp = get_current_time_ms();
-        pthread_mutex_lock(&filo->print);
-        printf("🛌 %ld %d is sleeping 🛌\n", timestamp, philosopher_id + 1);
-        pthread_mutex_unlock(&filo->print);
+        if (filo->is_dead == 0)
+        {
+            pthread_mutex_lock(&filo->print);
+            printf("🧑 %ld %d is thinking 🧑\n", timestamp - filo->init_program, philosopher_id + 1);
+            pthread_mutex_unlock(&filo->print);
+        }
+        timestamp = get_current_time_ms();
+        if (filo->is_dead == 0)
+        {
+            pthread_mutex_lock(&filo->print);
+            printf("🛌 %ld %d is sleeping 🛌\n", timestamp - filo->init_program, philosopher_id + 1);
+            pthread_mutex_unlock(&filo->print);
+            usleep(filo->time_to_sleep * 1000);
+        }
 
-        usleep(filo->time_to_sleep * 1000); // Simular el tiempo durmiendo
-		if (laps != -1)
-			laps++;
+        // Incrementar las vueltas de comida si hay un límite
+        if (laps != -1)
+            laps++;
     }
 
     return (NULL);
@@ -190,7 +208,7 @@ void init_filo_struct(t_filo **filo, char **argv)
         perror("Mutex init failed");
         exit(EXIT_FAILURE);
     }
-
+    (*filo)->init_program = get_current_time_ms();
     create_thread_philos(*filo);
 
     // Destruir mutexes y liberar memoria
@@ -227,55 +245,3 @@ int main(int argc, char **argv)
     init_filo(argv);
     return (0);
 }
-// Estructura que contiene el mutex y la variable compartida
-/* typedef struct {
-	int shared_counter;
-	pthread_mutex_t mutex;
-} thread_data_t;
-
-void* thread_function(void* arg) {
-	thread_data_t* data = (thread_data_t*)arg;
-	
-	// Cada hilo incrementa la variable compartida 100 veces
-		pthread_mutex_lock(&data->mutex);
-		printf("hilo: %d\n", data->shared_counter + 1);  // Bloquear el mutex antes de acceder a la variable compartida
-		data->shared_counter++;            // Acceso a la variable compartida
-		pthread_mutex_unlock(&data->mutex); // Desbloquear el mutex después de modificar la variable
-	return NULL;
-}
-
-int main() {
-	pthread_t threads[32754];
-	thread_data_t data;
-	
-	// Inicializar la estructura
-	data.shared_counter = 0;
-
-	// Inicializar el mutex
-	if (pthread_mutex_init(&data.mutex, NULL) != 0) {
-		perror("Mutex initialization failed");
-		return EXIT_FAILURE;
-	}
-
-	// Crear los hilos
-	for (int i = 0; i < 32754; i++) {
-		if (pthread_create(&threads[i], NULL, thread_function, &data) != 0) {
-			perror("Thread creation failed");
-			pthread_mutex_destroy(&data.mutex);
-			return EXIT_FAILURE;
-		}
-	}
-
-	// Esperar a que todos los hilos terminen
-	for (int i = 0; i < 32754; i++) {
-		pthread_join(threads[i], NULL);
-	}
-
-	// Imprimir el resultado final
-	printf("Final value of shared_counter: %d\n", data.shared_counter);
-
-	// Destruir el mutex
-	pthread_mutex_destroy(&data.mutex);
-
-	return EXIT_SUCCESS;
-} */

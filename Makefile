@@ -23,8 +23,9 @@ OBJ = $(SRC:src/%.c=$(OBJDIR)/%.o)
 # Compilador y opciones
 # --------------------------------------
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-LIBS = -lpthread
+CFLAGS = -Wall -Wextra -Werror -pthread -fsanitize=thread
+
+
 
 # --------------------------------------
 # Colores y estilos
