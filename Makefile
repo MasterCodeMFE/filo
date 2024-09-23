@@ -12,7 +12,9 @@ OBJDIR = obj
 # Archivos fuente
 # --------------------------------------
 SRC = ./src/main.c \
-	  ./src/ft_atoi.c
+	  ./src/ft_atoi.c \
+	  ./src/life_philosopher.c \
+	  ./src/ft_usleep.c
 
 # --------------------------------------
 # Archivos objeto

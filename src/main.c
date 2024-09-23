@@ -6,12 +6,11 @@
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 10:45:05 by manufern          #+#    #+#             */
-/*   Updated: 2024/09/18 19:48:13 by manufern         ###   ########.fr       */
+/*   Updated: 2024/09/23 16:58:22 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../filo.h"
-#include <sys/time.h>
 
 long get_current_time_ms()
 {
@@ -21,110 +20,13 @@ long get_current_time_ms()
 }
 
 // Función del filósofo
-void *philosopher(void *arg)
-{
-    t_filo *filo;
-    int left_fork;
-    int right_fork;
-    long timestamp;
-    int laps;
 
-    filo = (t_filo *)arg;
-    laps = 0;
-
-    // Asignación segura de philosopher_id usando un mutex
-    pthread_mutex_lock(&filo->id_mutex);
-    int philosopher_id = filo->philosopher_id++;
-    pthread_mutex_unlock(&filo->id_mutex);
-
-    left_fork = philosopher_id;
-    right_fork = (philosopher_id + 1) % filo->number_of_philosophers;
-
-    if (filo->number_of_times_each_philosopher_must_eat == -1)
-        laps = -1; // No hay límite en las veces que debe comer
-
-    while (laps == -1 || laps < filo->number_of_times_each_philosopher_must_eat)
-    {
-        filo->eat = 0;
-        timestamp = get_current_time_ms();
-
-        // Verificar si ha pasado demasiado tiempo desde la última comida
-        pthread_mutex_lock(&filo->last_meal_mutex[philosopher_id]);
-        if (get_current_time_ms() - filo->last_meal_time[philosopher_id] > filo->time_to_die || filo->number_of_philosophers < 2)
-        {
-            // Si ha pasado más tiempo del permitido sin comer, el filósofo muere
-            if (filo->is_dead == 0)
-            {
-                filo->is_dead = 1; // Asegúrate de que la variable is_dead se actualiza
-                pthread_mutex_lock(&filo->print);
-                printf("💀 %ld %d has died 💀\n", timestamp - filo->init_program, philosopher_id + 1);
-                pthread_mutex_unlock(&filo->print);
-                pthread_mutex_unlock(&filo->last_meal_mutex[philosopher_id]);
-            }
-            return (NULL); // Sale del ciclo, el filósofo ha muerto
-        }
-        pthread_mutex_unlock(&filo->last_meal_mutex[philosopher_id]);
-
-        // Pensar
-        // No hay mutex necesario aquí, ya que no accede a recursos compartidos
-
-        // Intentar tomar los tenedores
-        if (philosopher_id % 2 == 0)
-        {
-            pthread_mutex_lock(&filo->forks[left_fork]);
-            pthread_mutex_lock(&filo->forks[right_fork]);
-        }
-        else
-        {
-            pthread_mutex_lock(&filo->forks[right_fork]);
-            pthread_mutex_lock(&filo->forks[left_fork]);
-        }
-
-        // Comer
-        if (filo->is_dead == 0)
-        {
-            pthread_mutex_lock(&filo->print);
-            filo->eat = 1;
-            filo->last_meal_time[philosopher_id] = get_current_time_ms(); // Actualizar el tiempo de la última comida
-            printf("🍽️ %ld %d is eating 🍽️\n", filo->last_meal_time[philosopher_id] - filo->init_program, philosopher_id + 1);
-            pthread_mutex_unlock(&filo->print);
-
-            usleep(filo->time_to_eat * 1000); // Simular el tiempo comiendo
-        }
-
-        // Dejar los tenedores
-        pthread_mutex_unlock(&filo->forks[right_fork]);
-        pthread_mutex_unlock(&filo->forks[left_fork]);
-
-        // Dormir y repetir
-        timestamp = get_current_time_ms();
-        if (filo->is_dead == 0)
-        {
-            pthread_mutex_lock(&filo->print);
-            printf("🧑 %ld %d is thinking 🧑\n", timestamp - filo->init_program, philosopher_id + 1);
-            pthread_mutex_unlock(&filo->print);
-        }
-        timestamp = get_current_time_ms();
-        if (filo->is_dead == 0)
-        {
-            pthread_mutex_lock(&filo->print);
-            printf("🛌 %ld %d is sleeping 🛌\n", timestamp - filo->init_program, philosopher_id + 1);
-            pthread_mutex_unlock(&filo->print);
-            usleep(filo->time_to_sleep * 1000);
-        }
-
-        // Incrementar las vueltas de comida si hay un límite
-        if (laps != -1)
-            laps++;
-    }
-
-    return (NULL);
-}
 
 // Crear los hilos para los filósofos
 void create_thread_philos(t_filo *filo)
 {
     int i = 0;
+    pthread_t monitor_thread;
 
     filo->philos = malloc(sizeof(pthread_t) * filo->number_of_philosophers);
     if (!filo->philos)
@@ -133,25 +35,41 @@ void create_thread_philos(t_filo *filo)
         exit(EXIT_FAILURE);
     }
 
+    // Crear los hilos de los filósofos
     while (i < filo->number_of_philosophers)
     {
         if (pthread_create(&filo->philos[i], NULL, philosopher, (void *)filo) != 0)
         {
-            perror("Failed to create thread");
+            perror("Failed to create philosopher thread");
             exit(EXIT_FAILURE);
         }
         i++;
     }
 
+    // Crear hilo para el monitor
+    if (pthread_create(&monitor_thread, NULL, monitor_philosophers, (void *)filo) != 0)
+    {
+        perror("Failed to create monitor thread");
+        exit(EXIT_FAILURE);
+    }
+
+    // Esperar a que los hilos de los filósofos terminen
     i = 0;
     while (i < filo->number_of_philosophers)
     {
         if (pthread_join(filo->philos[i], NULL) != 0)
         {
-            perror("Failed to join thread");
+            perror("Failed to join philosopher thread");
             exit(EXIT_FAILURE);
         }
         i++;
+    }
+
+    // Esperar a que el hilo monitor termine
+    if (pthread_join(monitor_thread, NULL) != 0)
+    {
+        perror("Failed to join monitor thread");
+        exit(EXIT_FAILURE);
     }
 }
 
@@ -179,7 +97,9 @@ void init_filo_struct(t_filo **filo, char **argv)
     // Inicializar mutexes para los tenedores
     (*filo)->forks = malloc(sizeof(pthread_mutex_t) * (*filo)->number_of_philosophers);
     (*filo)->last_meal_mutex = malloc(sizeof(pthread_mutex_t) * (*filo)->number_of_philosophers);
-    if (!(*filo)->forks || !(*filo)->last_meal_mutex)
+    (*filo)->laps = malloc(sizeof(int) * (*filo)->number_of_philosophers);
+    (*filo)->eat = malloc(sizeof(int) * (*filo)->number_of_philosophers);
+    if (!(*filo)->forks || !(*filo)->last_meal_mutex || !(*filo)->laps || !(*filo)->eat)
     {
         perror("Malloc failed for forks or last_meal_mutex");
         exit(EXIT_FAILURE);
