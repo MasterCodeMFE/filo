@@ -6,11 +6,38 @@
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 10:45:05 by manufern          #+#    #+#             */
-/*   Updated: 2024/09/23 16:58:22 by manufern         ###   ########.fr       */
+/*   Updated: 2024/09/24 14:48:41 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../filo.h"
+
+void cleanup(t_filo *filo)
+{
+    int i;
+
+    // Destruir mutexes
+    i = 0;
+    while (i < filo->number_of_philosophers)
+    {
+        pthread_mutex_destroy(&filo->forks[i]);
+        pthread_mutex_destroy(&filo->last_meal_mutex[i]);
+        i++;
+    }
+
+    // Liberar memoria
+    free(filo->forks);
+    free(filo->last_meal_mutex);
+    free(filo->last_meal_time);
+    free(filo->laps);
+    free(filo->eat);
+    free(filo->philos);
+    pthread_mutex_destroy(&filo->print);
+    pthread_mutex_destroy(&filo->dead_mutex);
+    pthread_mutex_destroy(&filo->id_mutex);
+    pthread_mutex_destroy(&filo->death_mutex);
+    free(filo);
+}
 
 long get_current_time_ms()
 {
@@ -36,6 +63,11 @@ void create_thread_philos(t_filo *filo)
     }
 
     // Crear los hilos de los filósofos
+    if (pthread_create(&monitor_thread, NULL, monitor_philosophers, (void *)filo) != 0)
+    {
+        perror("Failed to create monitor thread");
+        exit(EXIT_FAILURE);
+    }
     while (i < filo->number_of_philosophers)
     {
         if (pthread_create(&filo->philos[i], NULL, philosopher, (void *)filo) != 0)
@@ -44,13 +76,6 @@ void create_thread_philos(t_filo *filo)
             exit(EXIT_FAILURE);
         }
         i++;
-    }
-
-    // Crear hilo para el monitor
-    if (pthread_create(&monitor_thread, NULL, monitor_philosophers, (void *)filo) != 0)
-    {
-        perror("Failed to create monitor thread");
-        exit(EXIT_FAILURE);
     }
 
     // Esperar a que los hilos de los filósofos terminen
@@ -78,19 +103,19 @@ void init_filo_struct(t_filo **filo, char **argv)
 {
     int i = 0;
 
-    *filo = malloc(sizeof(t_filo));
+    (*filo) = malloc(sizeof(t_filo));
     if (!*filo)
     {
         perror("Malloc failed for t_filo");
         exit(EXIT_FAILURE);
     }
 
-    (*filo)->number_of_philosophers = atol(argv[1]);
-    (*filo)->time_to_die = atol(argv[2]);
-    (*filo)->time_to_eat = atol(argv[3]);
-    (*filo)->time_to_sleep = atol(argv[4]);
+    (*filo)->number_of_philosophers = ft_atol(argv[1]);
+    (*filo)->time_to_die = ft_atol(argv[2]);
+    (*filo)->time_to_eat = ft_atol(argv[3]);
+    (*filo)->time_to_sleep = ft_atol(argv[4]);
     if (argv[5])
-    (*filo)->number_of_times_each_philosopher_must_eat = atol(argv[5]);
+    (*filo)->number_of_times_each_philosopher_must_eat = ft_atol(argv[5]);
 	else
 		(*filo)->number_of_times_each_philosopher_must_eat = -1;
 
@@ -134,19 +159,7 @@ void init_filo_struct(t_filo **filo, char **argv)
     (*filo)->init_program = get_current_time_ms();
     create_thread_philos(*filo);
 
-    // Destruir mutexes y liberar memoria
-    i = 0;
-    while (i < (*filo)->number_of_philosophers)
-    {
-        pthread_mutex_destroy(&(*filo)->forks[i]);
-        pthread_mutex_destroy(&(*filo)->last_meal_mutex[i]);
-        i++;
-    }
-    free((*filo)->forks);
-    free((*filo)->last_meal_mutex);
-    free((*filo)->last_meal_time);
-    pthread_mutex_destroy(&(*filo)->print);
-    free(*filo);
+    cleanup(*filo);
 }
 
 // Función para inicializar la estructura y comenzar la simulación

@@ -6,7 +6,7 @@
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 10:43:34 by manufern          #+#    #+#             */
-/*   Updated: 2024/09/23 16:52:20 by manufern         ###   ########.fr       */
+/*   Updated: 2024/09/24 11:10:35 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <unistd.h>
 # include <sys/time.h>
 # include <pthread.h>
-# include <sys/time.h>
 # include <stdint.h> 
 # include "./filo_struc.h"
 
