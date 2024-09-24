@@ -14,6 +14,7 @@ typedef struct s_filo
     pthread_mutex_t *forks;
     pthread_t *philos;
     pthread_mutex_t print;
+    pthread_mutex_t *laps_mutex;
     pthread_mutex_t *last_meal_mutex;
     int is_dead;
     pthread_mutex_t dead_mutex;
@@ -21,6 +22,7 @@ typedef struct s_filo
     pthread_mutex_t death_mutex;
     int philosopher_id;
     long init_program;
+    pthread_mutex_t *pick_fork_mutex;
 }   t_filo;
 
 #endif

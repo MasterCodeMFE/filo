@@ -25,7 +25,7 @@ OBJ = $(SRC:src/%.c=$(OBJDIR)/%.o)
 # Compilador y opciones
 # --------------------------------------
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror #-g3 -pthread -fsanitize=thread
+CFLAGS = -Wall -Wextra -Werror -g3 -pthread -fsanitize=thread
 
 
 

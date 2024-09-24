@@ -6,7 +6,7 @@
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 10:45:05 by manufern          #+#    #+#             */
-/*   Updated: 2024/09/24 14:48:41 by manufern         ###   ########.fr       */
+/*   Updated: 2024/09/24 16:26:04 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,14 @@ void cleanup(t_filo *filo)
     {
         pthread_mutex_destroy(&filo->forks[i]);
         pthread_mutex_destroy(&filo->last_meal_mutex[i]);
+        pthread_mutex_destroy(&filo->laps_mutex[i]);
         i++;
     }
+
+    // Destruir mutexes restantes
+    pthread_mutex_destroy(&filo->print);
+    pthread_mutex_destroy(&filo->dead_mutex);
+    pthread_mutex_destroy(&filo->id_mutex);
 
     // Liberar memoria
     free(filo->forks);
@@ -32,10 +38,7 @@ void cleanup(t_filo *filo)
     free(filo->laps);
     free(filo->eat);
     free(filo->philos);
-    pthread_mutex_destroy(&filo->print);
-    pthread_mutex_destroy(&filo->dead_mutex);
-    pthread_mutex_destroy(&filo->id_mutex);
-    pthread_mutex_destroy(&filo->death_mutex);
+    free(filo->laps_mutex);
     free(filo);
 }
 
@@ -124,7 +127,9 @@ void init_filo_struct(t_filo **filo, char **argv)
     (*filo)->last_meal_mutex = malloc(sizeof(pthread_mutex_t) * (*filo)->number_of_philosophers);
     (*filo)->laps = malloc(sizeof(int) * (*filo)->number_of_philosophers);
     (*filo)->eat = malloc(sizeof(int) * (*filo)->number_of_philosophers);
-    if (!(*filo)->forks || !(*filo)->last_meal_mutex || !(*filo)->laps || !(*filo)->eat)
+    (*filo)->laps_mutex = malloc(sizeof(pthread_mutex_t) * (*filo)->number_of_philosophers);
+    (*filo)->pick_fork_mutex = malloc(sizeof(pthread_mutex_t) * (*filo)->number_of_philosophers);
+    if (!(*filo)->forks || !(*filo)->last_meal_mutex || !(*filo)->laps || !(*filo)->eat || !(*filo)->laps_mutex)
     {
         perror("Malloc failed for forks or last_meal_mutex");
         exit(EXIT_FAILURE);
@@ -140,8 +145,10 @@ void init_filo_struct(t_filo **filo, char **argv)
     
     while (i < (*filo)->number_of_philosophers)
     {
-        if (pthread_mutex_init(&(*filo)->forks[i], NULL) != 0 ||
-            pthread_mutex_init(&(*filo)->last_meal_mutex[i], NULL) != 0)
+        if (pthread_mutex_init(&(*filo)->forks[i], NULL) != 0
+            || pthread_mutex_init(&(*filo)->last_meal_mutex[i], NULL) != 0
+            || pthread_mutex_init(&(*filo)->laps_mutex[i], NULL) != 0
+            || pthread_mutex_init(&(*filo)->pick_fork_mutex[i], NULL) != 0)
         {
             perror("Mutex init failed");
             exit(EXIT_FAILURE);
