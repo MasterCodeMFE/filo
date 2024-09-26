@@ -6,7 +6,7 @@
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 10:45:05 by manufern          #+#    #+#             */
-/*   Updated: 2024/09/24 16:26:04 by manufern         ###   ########.fr       */
+/*   Updated: 2024/09/25 11:30:19 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void create_thread_philos(t_filo *filo)
     }
 
     // Crear los hilos de los filósofos
+    filo->init_program = get_current_time_ms();
     if (pthread_create(&monitor_thread, NULL, monitor_philosophers, (void *)filo) != 0)
     {
         perror("Failed to create monitor thread");
@@ -163,7 +164,6 @@ void init_filo_struct(t_filo **filo, char **argv)
         perror("Mutex init failed");
         exit(EXIT_FAILURE);
     }
-    (*filo)->init_program = get_current_time_ms();
     create_thread_philos(*filo);
 
     cleanup(*filo);
