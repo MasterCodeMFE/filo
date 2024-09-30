@@ -12,7 +12,8 @@ OBJDIR = obj
 # Archivos fuente
 # --------------------------------------
 SRC = ./src/main.c \
-	  ./src/ft_atoi.c
+	  ./src/ft_atoi.c \
+	  ./src/ft_usleep.c
 
 
 # --------------------------------------
@@ -24,7 +25,7 @@ OBJ = $(SRC:src/%.c=$(OBJDIR)/%.o)
 # Compilador y opciones
 # --------------------------------------
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g3 -pthread -fsanitize=thread
+CFLAGS = -Wall -Wextra -Werror #-g3 -pthread -fsanitize=thread
 
 
 
