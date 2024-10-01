@@ -6,7 +6,7 @@
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 11:11:44 by manufern          #+#    #+#             */
-/*   Updated: 2024/09/30 18:12:09 by manufern         ###   ########.fr       */
+/*   Updated: 2024/10/01 11:25:11 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,22 +35,18 @@ void *monitoring(void *philo)
             pthread_mutex_lock(&data->meal_time_mutex);
             if (current_time - data->last_meal_time[i] > data->time_to_die)
             {
+                pthread_mutex_lock(&data->death_mutex);
+                data->philosopher_dead = 1;
+                pthread_mutex_unlock(&data->death_mutex);
                 pthread_mutex_unlock(&data->meal_time_mutex); // Desbloquear antes de salir
                 pthread_mutex_lock(&data->print);
                 printf("💀 %ld %d has died 💀\n", current_time - data->start_time, i + 1);
                 pthread_mutex_unlock(&data->print);
-
-                // Marcar que un filósofo ha muerto
-                pthread_mutex_lock(&data->death_mutex);
-                data->philosopher_dead = 1;
-                pthread_mutex_unlock(&data->death_mutex);
                 return (NULL); // Salir del hilo de monitoreo
             }
             pthread_mutex_unlock(&data->meal_time_mutex);
             i++;
         }
-
-        // Revisar si ya ha muerto un filósofo
         pthread_mutex_lock(&data->death_mutex);
         if (data->philosopher_dead)
         {
@@ -67,6 +63,13 @@ void ft_think(t_filo *philo, int philosopher_id)
 	t_filo *data;
 
 	data = (t_filo *)philo;
+	pthread_mutex_lock(&data->death_mutex);
+	if (data->philosopher_dead)
+	{
+		pthread_mutex_unlock(&data->death_mutex);
+		return ; // Terminar el hilo si un filósofo ha muerto
+	}
+	pthread_mutex_unlock(&data->death_mutex);
 	pthread_mutex_lock(&data->print);
 	printf("🧑 %ld %d is thinking 🧑\n", get_current_time_ms() - data->start_time, philosopher_id + 1);
 	pthread_mutex_unlock(&data->print);
@@ -78,9 +81,23 @@ void ft_sleep(t_filo *philo, int philosopher_id)
 	t_filo *data;
 
 	data = (t_filo *)philo;
+	pthread_mutex_lock(&data->death_mutex);
+	if (data->philosopher_dead)
+	{
+		pthread_mutex_unlock(&data->death_mutex);
+		return ;
+	}
+	pthread_mutex_unlock(&data->death_mutex);
 	pthread_mutex_lock(&data->print);
 	printf("🛌 %ld %d is sleeping 🛌\n", get_current_time_ms() - data->start_time, philosopher_id + 1);
 	pthread_mutex_unlock(&data->print);
+	pthread_mutex_lock(&data->death_mutex);
+	if (data->philosopher_dead)
+	{
+		pthread_mutex_unlock(&data->death_mutex);
+		return ;
+	}
+	pthread_mutex_unlock(&data->death_mutex);
 	my_usleep(data->time_to_sleep * 1000);
 }
 
@@ -89,21 +106,23 @@ void ft_eat(t_filo *philo, int philosopher_id, int left_fork, int right_fork)
     t_filo *data;
 
     data = (t_filo *)philo;
-    
+    pthread_mutex_lock(&data->death_mutex);
+	if (data->philosopher_dead)
+	{
+		pthread_mutex_unlock(&data->death_mutex);
+		return ;
+	}
+	pthread_mutex_unlock(&data->death_mutex);
     // Proteger el acceso a last_meal_time
     pthread_mutex_lock(&data->meal_time_mutex);
     data->last_meal_time[philosopher_id] = get_current_time_ms();
     pthread_mutex_unlock(&data->meal_time_mutex);
-
     pthread_mutex_lock(&data->print);
     printf("🍽️  %ld %d is eating 🍽️\n", data->last_meal_time[philosopher_id] - data->start_time, philosopher_id + 1);
     pthread_mutex_unlock(&data->print);
-
     my_usleep(data->time_to_eat * 1000);
-
     pthread_mutex_unlock(&data->forks[left_fork]);
     pthread_mutex_unlock(&data->forks[right_fork]);
-
     data->eat[philosopher_id] = 1;
 }
 
@@ -117,8 +136,10 @@ void ft_take_fork(t_filo *philo, int philosopher_id, int left_fork, int right_fo
 		pthread_mutex_lock(&data->forks[left_fork]);
 		pthread_mutex_lock(&data->print);
 		pthread_mutex_lock(&data->death_mutex);
-        if (data->philosopher_dead)
+        if (data->philosopher_dead == 1)
         {
+			pthread_mutex_unlock(&data->forks[left_fork]);
+			pthread_mutex_unlock(&data->print);
             pthread_mutex_unlock(&data->death_mutex);
             return ; // Terminar el hilo si un filósofo ha muerto
         }
@@ -128,8 +149,11 @@ void ft_take_fork(t_filo *philo, int philosopher_id, int left_fork, int right_fo
 		pthread_mutex_lock(&data->forks[right_fork]);
 		pthread_mutex_lock(&data->print);
 		pthread_mutex_lock(&data->death_mutex);
-        if (data->philosopher_dead)
+        if (data->philosopher_dead == 1)
         {
+			pthread_mutex_unlock(&data->forks[left_fork]);
+			pthread_mutex_unlock(&data->forks[right_fork]);
+			pthread_mutex_unlock(&data->print);
             pthread_mutex_unlock(&data->death_mutex);
             return ; // Terminar el hilo si un filósofo ha muerto
         }
@@ -137,8 +161,10 @@ void ft_take_fork(t_filo *philo, int philosopher_id, int left_fork, int right_fo
 		printf("🍴 %ld %d has taken a fork (right) 🍴\n", get_current_time_ms() - data->start_time, philosopher_id + 1);
 		pthread_mutex_unlock(&data->print);
 		pthread_mutex_lock(&data->death_mutex);
-        if (data->philosopher_dead)
+        if (data->philosopher_dead == 1)
         {
+			pthread_mutex_unlock(&data->forks[left_fork]);
+			pthread_mutex_unlock(&data->forks[right_fork]);
             pthread_mutex_unlock(&data->death_mutex);
             return ; // Terminar el hilo si un filósofo ha muerto
         }
@@ -152,6 +178,8 @@ void ft_take_fork(t_filo *philo, int philosopher_id, int left_fork, int right_fo
 		pthread_mutex_lock(&data->death_mutex);
 		if (data->philosopher_dead)
         {
+			pthread_mutex_unlock(&data->forks[right_fork]);
+			pthread_mutex_unlock(&data->print);
             pthread_mutex_unlock(&data->death_mutex);
             return ; // Terminar el hilo si un filósofo ha muerto
         }
@@ -163,6 +191,9 @@ void ft_take_fork(t_filo *philo, int philosopher_id, int left_fork, int right_fo
 		pthread_mutex_lock(&data->death_mutex);
 		if (data->philosopher_dead)
         {
+			pthread_mutex_unlock(&data->forks[right_fork]);
+			pthread_mutex_unlock(&data->forks[left_fork]);
+			pthread_mutex_unlock(&data->print);
             pthread_mutex_unlock(&data->death_mutex);
             return ; // Terminar el hilo si un filósofo ha muerto
         }
@@ -172,6 +203,8 @@ void ft_take_fork(t_filo *philo, int philosopher_id, int left_fork, int right_fo
 		pthread_mutex_lock(&data->death_mutex);
 		if (data->philosopher_dead)
         {
+			pthread_mutex_unlock(&data->forks[right_fork]);
+			pthread_mutex_unlock(&data->forks[left_fork]);
             pthread_mutex_unlock(&data->death_mutex);
             return ; // Terminar el hilo si un filósofo ha muerto
         }
