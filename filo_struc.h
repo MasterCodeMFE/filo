@@ -7,7 +7,7 @@ typedef struct s_filo
     long time_to_die;
     long time_to_eat;
     long time_to_sleep;
-    long number_of_times_each_philosopher_must_eat;
+    long number_of_times_eat;
     long *last_meal_time;
     int *laps; // Asegúrate de que este array esté inicializado correctamente
     int *eat;

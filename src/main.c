@@ -6,7 +6,7 @@
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 10:45:05 by manufern          #+#    #+#             */
-/*   Updated: 2024/09/25 11:30:19 by manufern         ###   ########.fr       */
+/*   Updated: 2024/10/03 13:12:13 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void cleanup(t_filo *filo)
 
     // Destruir mutexes
     i = 0;
-    while (i < filo->number_of_philosophers)
+    while (i < filo->number_philo)
     {
         pthread_mutex_destroy(&filo->forks[i]);
         pthread_mutex_destroy(&filo->last_meal_mutex[i]);
@@ -58,7 +58,7 @@ void create_thread_philos(t_filo *filo)
     int i = 0;
     pthread_t monitor_thread;
 
-    filo->philos = malloc(sizeof(pthread_t) * filo->number_of_philosophers);
+    filo->philos = malloc(sizeof(pthread_t) * filo->number_philo);
     if (!filo->philos)
     {
         perror("Malloc failed for philosopher threads");
@@ -72,7 +72,7 @@ void create_thread_philos(t_filo *filo)
         perror("Failed to create monitor thread");
         exit(EXIT_FAILURE);
     }
-    while (i < filo->number_of_philosophers)
+    while (i < filo->number_philo)
     {
         if (pthread_create(&filo->philos[i], NULL, philosopher, (void *)filo) != 0)
         {
@@ -84,7 +84,7 @@ void create_thread_philos(t_filo *filo)
 
     // Esperar a que los hilos de los filósofos terminen
     i = 0;
-    while (i < filo->number_of_philosophers)
+    while (i < filo->number_philo)
     {
         if (pthread_join(filo->philos[i], NULL) != 0)
         {
@@ -114,22 +114,22 @@ void init_filo_struct(t_filo **filo, char **argv)
         exit(EXIT_FAILURE);
     }
 
-    (*filo)->number_of_philosophers = ft_atol(argv[1]);
+    (*filo)->number_philo = ft_atol(argv[1]);
     (*filo)->time_to_die = ft_atol(argv[2]);
     (*filo)->time_to_eat = ft_atol(argv[3]);
     (*filo)->time_to_sleep = ft_atol(argv[4]);
     if (argv[5])
-    (*filo)->number_of_times_each_philosopher_must_eat = ft_atol(argv[5]);
+    (*filo)->number_of_times_eat = ft_atol(argv[5]);
 	else
-		(*filo)->number_of_times_each_philosopher_must_eat = -1;
+		(*filo)->number_of_times_eat = -1;
 
     // Inicializar mutexes para los tenedores
-    (*filo)->forks = malloc(sizeof(pthread_mutex_t) * (*filo)->number_of_philosophers);
-    (*filo)->last_meal_mutex = malloc(sizeof(pthread_mutex_t) * (*filo)->number_of_philosophers);
-    (*filo)->laps = malloc(sizeof(int) * (*filo)->number_of_philosophers);
-    (*filo)->eat = malloc(sizeof(int) * (*filo)->number_of_philosophers);
-    (*filo)->laps_mutex = malloc(sizeof(pthread_mutex_t) * (*filo)->number_of_philosophers);
-    (*filo)->pick_fork_mutex = malloc(sizeof(pthread_mutex_t) * (*filo)->number_of_philosophers);
+    (*filo)->forks = malloc(sizeof(pthread_mutex_t) * (*filo)->number_philo);
+    (*filo)->last_meal_mutex = malloc(sizeof(pthread_mutex_t) * (*filo)->number_philo);
+    (*filo)->laps = malloc(sizeof(int) * (*filo)->number_philo);
+    (*filo)->eat = malloc(sizeof(int) * (*filo)->number_philo);
+    (*filo)->laps_mutex = malloc(sizeof(pthread_mutex_t) * (*filo)->number_philo);
+    (*filo)->pick_fork_mutex = malloc(sizeof(pthread_mutex_t) * (*filo)->number_philo);
     if (!(*filo)->forks || !(*filo)->last_meal_mutex || !(*filo)->laps || !(*filo)->eat || !(*filo)->laps_mutex)
     {
         perror("Malloc failed for forks or last_meal_mutex");
@@ -137,14 +137,14 @@ void init_filo_struct(t_filo **filo, char **argv)
     }
     
     // Inicializar tiempos de última comida
-    (*filo)->last_meal_time = malloc(sizeof(long) * (*filo)->number_of_philosophers);
+    (*filo)->last_meal_time = malloc(sizeof(long) * (*filo)->number_philo);
     if (!(*filo)->last_meal_time)
     {
         perror("Malloc failed for last_meal_time");
         exit(EXIT_FAILURE);
     }
     
-    while (i < (*filo)->number_of_philosophers)
+    while (i < (*filo)->number_philo)
     {
         if (pthread_mutex_init(&(*filo)->forks[i], NULL) != 0
             || pthread_mutex_init(&(*filo)->last_meal_mutex[i], NULL) != 0

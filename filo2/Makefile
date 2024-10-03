@@ -13,7 +13,17 @@ OBJDIR = obj
 # --------------------------------------
 SRC = ./src/main.c \
 	  ./src/ft_atoi.c \
-	  ./src/ft_usleep.c
+	  ./src/ft_usleep.c \
+	  ./src/create_threads.c \
+	  ./src/eat.c \
+	  ./src/monitoring.c \
+	  ./src/routine.c \
+	  ./src/print_sleep.c \
+	  ./src/sleep.c \
+	  ./src/init_mutex.c \
+	  ./src/take_fork.c \
+	  ./src/think.c \
+	  ./src/time.c
 
 
 # --------------------------------------

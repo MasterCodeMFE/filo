@@ -6,7 +6,7 @@
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 09:49:51 by manufern          #+#    #+#             */
-/*   Updated: 2024/09/25 10:38:32 by manufern         ###   ########.fr       */
+/*   Updated: 2024/10/03 13:07:14 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void cleanup(t_filo *filo)
     int i;
 
     i = 0;
-    while (i < filo->number_of_philosophers)
+    while (i < filo->number_philo)
     {
         pthread_mutex_destroy(&filo->forks[i]);
         pthread_mutex_destroy(&filo->last_meal_mutex[i]);

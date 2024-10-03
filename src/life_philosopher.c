@@ -6,7 +6,7 @@
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 09:53:56 by manufern          #+#    #+#             */
-/*   Updated: 2024/09/26 10:54:48 by manufern         ###   ########.fr       */
+/*   Updated: 2024/10/03 13:12:13 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ void *monitor_philosophers(void *arg)
 		i = 0;
 		all_finished = 1; // Asumir que todos han terminado
 
-		while (i < filo->number_of_philosophers)
+		while (i < filo->number_philo)
 		{
 			pthread_mutex_lock(&filo->laps_mutex[i]); // Proteger el acceso a laps
-			if (filo->laps[i] == filo->number_of_times_each_philosopher_must_eat && filo->number_of_times_each_philosopher_must_eat != -1)
+			if (filo->laps[i] == filo->number_of_times_eat && filo->number_of_times_eat != -1)
 			{
 				pthread_mutex_unlock(&filo->laps_mutex[i]);
 				i++;
@@ -135,14 +135,14 @@ void *philosopher(void *arg)
 	pthread_mutex_unlock(&filo->id_mutex);
 
 	left_fork = philosopher_id;
-	right_fork = (philosopher_id + 1) % filo->number_of_philosophers;
+	right_fork = (philosopher_id + 1) % filo->number_philo;
 
-	if (filo->number_of_philosophers == 1)
+	if (filo->number_philo == 1)
 	{
 		printf("🍴 %ld %d has taken a fork 🍴\n", get_current_time_ms() - filo->init_program, philosopher_id + 1);
 		return (NULL);
 	}
-	if (filo->number_of_times_each_philosopher_must_eat == -1)
+	if (filo->number_of_times_eat == -1)
 		laps = -1;
 
 	pthread_mutex_lock(&filo->laps_mutex[philosopher_id]);
@@ -150,7 +150,7 @@ void *philosopher(void *arg)
 	pthread_mutex_unlock(&filo->laps_mutex[philosopher_id]);
 	if((philosopher_id + 1) % 2 == 0)
 		my_usleep(1000);
-	while (laps == -1 || laps < filo->number_of_times_each_philosopher_must_eat)
+	while (laps == -1 || laps < filo->number_of_times_eat)
 	{
 		filo->eat[philosopher_id] = 0;
 
