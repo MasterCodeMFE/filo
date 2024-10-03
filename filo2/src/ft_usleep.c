@@ -6,7 +6,7 @@
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 09:56:34 by manufern          #+#    #+#             */
-/*   Updated: 2024/10/03 15:37:18 by manufern         ###   ########.fr       */
+/*   Updated: 2024/10/03 15:46:07 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ void	my_usleep(unsigned int microseconds)
 
 	start = get_time();
 	while ((get_time() - start) < microseconds)
-		usleep(microseconds/1000);
+		usleep(microseconds / 1000);
 }
