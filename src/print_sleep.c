@@ -6,7 +6,7 @@
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 14:36:07 by manufern          #+#    #+#             */
-/*   Updated: 2024/10/03 14:40:19 by manufern         ###   ########.fr       */
+/*   Updated: 2025/04/21 15:05:24 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 void	ft_print_sleep(t_filo *philo, int philosopher_id)
 {
-	t_filo	*data;
+	long	timestamp;
 
-	data = (t_filo *)philo;
-	pthread_mutex_lock(&data->print);
-	pthread_mutex_lock(&data->death_mutex);
-	if (data->philosopher_dead)
+	pthread_mutex_lock(&philo->death_mutex);
+	if (philo->philosopher_dead)
 	{
-		pthread_mutex_unlock(&data->print);
-		pthread_mutex_unlock(&data->death_mutex);
+		pthread_mutex_unlock(&philo->death_mutex);
 		return ;
 	}
-	pthread_mutex_unlock(&data->death_mutex);
-	printf("🛌 %ld %d is sleeping 🛌\n",
-		get_current_time_ms() - data->start_time, philosopher_id + 1);
-	pthread_mutex_unlock(&data->print);
+	pthread_mutex_unlock(&philo->death_mutex);
+
+	timestamp = get_current_time_ms() - philo->start_time;
+
+	pthread_mutex_lock(&philo->print);
+	printf("🛌 %ld %d is sleeping 🛌\n", timestamp, philosopher_id + 1);
+	pthread_mutex_unlock(&philo->print);
 }

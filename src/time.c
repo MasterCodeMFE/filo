@@ -6,7 +6,7 @@
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 12:20:46 by manufern          #+#    #+#             */
-/*   Updated: 2024/10/03 13:23:28 by manufern         ###   ########.fr       */
+/*   Updated: 2025/04/21 15:09:20 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 long	get_current_time_ms(void)
 {
-	struct timeval	tv;
+	struct timeval tv;
 
-	gettimeofday(&tv, NULL);
-	return ((tv.tv_sec * 1000) + (tv.tv_usec / 1000));
+	if (gettimeofday(&tv, NULL) != 0)
+		return (-1);
+	return ((long)(tv.tv_sec) * 1000L + (tv.tv_usec / 1000));
 }
+
