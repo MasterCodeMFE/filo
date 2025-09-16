@@ -1,0 +1,1045 @@
+🍴 1 2 has taken a fork (left) 🍴
+🍴 1 2 has taken a fork (right) 🍴
+🍽️  1 2 is eating 🍽️
+🍴 1 4 has taken a fork (left) 🍴
+🍴 1 4 has taken a fork (right) 🍴
+🍽️  1 4 is eating 🍽️
+🍴 1 6 has taken a fork (left) 🍴
+🍴 1 6 has taken a fork (right) 🍴
+🍽️  1 6 is eating 🍽️
+🍴 1 8 has taken a fork (left) 🍴
+🍴 1 8 has taken a fork (right) 🍴
+🍽️  1 8 is eating 🍽️
+🍴 1 10 has taken a fork (left) 🍴
+🍴 1 10 has taken a fork (right) 🍴
+🍽️  1 10 is eating 🍽️
+🍴 2 12 has taken a fork (left) 🍴
+🍴 2 12 has taken a fork (right) 🍴
+🍽️  2 12 is eating 🍽️
+🍴 2 14 has taken a fork (left) 🍴
+🍴 2 14 has taken a fork (right) 🍴
+🍽️  2 14 is eating 🍽️
+🍴 2 16 has taken a fork (left) 🍴
+🍴 2 16 has taken a fork (right) 🍴
+🍽️  2 16 is eating 🍽️
+🍴 2 18 has taken a fork (left) 🍴
+🍴 2 18 has taken a fork (right) 🍴
+🍽️  2 18 is eating 🍽️
+🍴 2 20 has taken a fork (left) 🍴
+🍴 2 20 has taken a fork (right) 🍴
+🍽️  2 20 is eating 🍽️
+🍴 2 22 has taken a fork (left) 🍴
+🍴 2 22 has taken a fork (right) 🍴
+🍽️  2 22 is eating 🍽️
+🍴 2 24 has taken a fork (left) 🍴
+🍴 2 24 has taken a fork (right) 🍴
+🍽️  2 24 is eating 🍽️
+🍴 3 26 has taken a fork (left) 🍴
+🍴 3 26 has taken a fork (right) 🍴
+🍽️  3 26 is eating 🍽️
+🍴 3 28 has taken a fork (left) 🍴
+🍴 3 28 has taken a fork (right) 🍴
+🍽️  3 28 is eating 🍽️
+🍴 3 30 has taken a fork (left) 🍴
+🍴 3 30 has taken a fork (right) 🍴
+🍽️  3 30 is eating 🍽️
+🍴 3 32 has taken a fork (left) 🍴
+🍴 3 32 has taken a fork (right) 🍴
+🍽️  3 32 is eating 🍽️
+🍴 3 34 has taken a fork (left) 🍴
+🍴 3 34 has taken a fork (right) 🍴
+🍽️  3 34 is eating 🍽️
+🍴 3 36 has taken a fork (left) 🍴
+🍴 3 36 has taken a fork (right) 🍴
+🍽️  3 36 is eating 🍽️
+🍴 4 38 has taken a fork (left) 🍴
+🍴 4 38 has taken a fork (right) 🍴
+🍽️  4 38 is eating 🍽️
+🍴 4 40 has taken a fork (left) 🍴
+🍴 4 40 has taken a fork (right) 🍴
+🍽️  4 40 is eating 🍽️
+🍴 4 42 has taken a fork (left) 🍴
+🍴 4 42 has taken a fork (right) 🍴
+🍽️  4 42 is eating 🍽️
+🍴 4 44 has taken a fork (left) 🍴
+🍴 4 44 has taken a fork (right) 🍴
+🍽️  4 44 is eating 🍽️
+🍴 4 46 has taken a fork (left) 🍴
+🍴 4 46 has taken a fork (right) 🍴
+🍽️  4 46 is eating 🍽️
+🍴 4 48 has taken a fork (left) 🍴
+🍴 4 48 has taken a fork (right) 🍴
+🍽️  4 48 is eating 🍽️
+🍴 4 50 has taken a fork (left) 🍴
+🍴 4 50 has taken a fork (right) 🍴
+🍽️  4 50 is eating 🍽️
+🍴 4 52 has taken a fork (left) 🍴
+🍴 4 52 has taken a fork (right) 🍴
+🍽️  4 52 is eating 🍽️
+🍴 4 54 has taken a fork (left) 🍴
+🍴 4 54 has taken a fork (right) 🍴
+🍽️  4 54 is eating 🍽️
+🍴 5 56 has taken a fork (left) 🍴
+🍴 5 56 has taken a fork (right) 🍴
+🍽️  5 56 is eating 🍽️
+🍴 5 58 has taken a fork (left) 🍴
+🍴 5 58 has taken a fork (right) 🍴
+🍽️  5 58 is eating 🍽️
+🍴 5 60 has taken a fork (left) 🍴
+🍴 5 60 has taken a fork (right) 🍴
+🍽️  5 60 is eating 🍽️
+🍴 5 62 has taken a fork (left) 🍴
+🍴 5 62 has taken a fork (right) 🍴
+🍽️  5 62 is eating 🍽️
+🍴 5 64 has taken a fork (left) 🍴
+🍴 5 64 has taken a fork (right) 🍴
+🍽️  5 64 is eating 🍽️
+🍴 5 66 has taken a fork (left) 🍴
+🍴 5 66 has taken a fork (right) 🍴
+🍽️  5 66 is eating 🍽️
+🍴 5 68 has taken a fork (left) 🍴
+🍴 5 68 has taken a fork (right) 🍴
+🍽️  5 68 is eating 🍽️
+🍴 6 70 has taken a fork (left) 🍴
+🍴 6 70 has taken a fork (right) 🍴
+🍽️  6 70 is eating 🍽️
+🍴 6 72 has taken a fork (left) 🍴
+🍴 6 72 has taken a fork (right) 🍴
+🍽️  6 72 is eating 🍽️
+🍴 7 74 has taken a fork (left) 🍴
+🍴 7 74 has taken a fork (right) 🍴
+🍽️  7 74 is eating 🍽️
+🍴 7 76 has taken a fork (left) 🍴
+🍴 7 76 has taken a fork (right) 🍴
+🍽️  7 76 is eating 🍽️
+🍴 7 78 has taken a fork (left) 🍴
+🍴 7 78 has taken a fork (right) 🍴
+🍽️  7 78 is eating 🍽️
+🍴 7 80 has taken a fork (left) 🍴
+🍴 7 80 has taken a fork (right) 🍴
+🍽️  7 80 is eating 🍽️
+🍴 7 82 has taken a fork (left) 🍴
+🍴 7 82 has taken a fork (right) 🍴
+🍽️  7 82 is eating 🍽️
+🍴 8 84 has taken a fork (left) 🍴
+🍴 8 84 has taken a fork (right) 🍴
+🍽️  8 84 is eating 🍽️
+🍴 8 86 has taken a fork (left) 🍴
+🍴 8 86 has taken a fork (right) 🍴
+🍽️  8 86 is eating 🍽️
+🍴 8 88 has taken a fork (left) 🍴
+🍴 8 88 has taken a fork (right) 🍴
+🍽️  8 88 is eating 🍽️
+🍴 8 90 has taken a fork (left) 🍴
+🍴 8 90 has taken a fork (right) 🍴
+🍽️  8 90 is eating 🍽️
+🍴 8 92 has taken a fork (left) 🍴
+🍴 8 92 has taken a fork (right) 🍴
+🍽️  8 92 is eating 🍽️
+🍴 8 94 has taken a fork (left) 🍴
+🍴 8 94 has taken a fork (right) 🍴
+🍽️  8 94 is eating 🍽️
+🍴 8 96 has taken a fork (left) 🍴
+🍴 8 96 has taken a fork (right) 🍴
+🍽️  8 96 is eating 🍽️
+🍴 9 98 has taken a fork (left) 🍴
+🍴 9 98 has taken a fork (right) 🍴
+🍽️  9 98 is eating 🍽️
+🍴 9 100 has taken a fork (left) 🍴
+🍴 9 100 has taken a fork (right) 🍴
+🍽️  9 100 is eating 🍽️
+🍴 9 102 has taken a fork (left) 🍴
+🍴 9 102 has taken a fork (right) 🍴
+🍽️  9 102 is eating 🍽️
+🍴 9 104 has taken a fork (left) 🍴
+🍴 9 104 has taken a fork (right) 🍴
+🍽️  9 104 is eating 🍽️
+🍴 9 106 has taken a fork (left) 🍴
+🍴 9 106 has taken a fork (right) 🍴
+🍽️  9 106 is eating 🍽️
+🍴 10 108 has taken a fork (left) 🍴
+🍴 10 108 has taken a fork (right) 🍴
+🍽️  10 108 is eating 🍽️
+🍴 10 110 has taken a fork (left) 🍴
+🍴 10 110 has taken a fork (right) 🍴
+🍽️  10 110 is eating 🍽️
+🍴 10 112 has taken a fork (left) 🍴
+🍴 10 112 has taken a fork (right) 🍴
+🍽️  10 112 is eating 🍽️
+🍴 10 114 has taken a fork (left) 🍴
+🍴 10 114 has taken a fork (right) 🍴
+🍽️  10 114 is eating 🍽️
+🍴 10 116 has taken a fork (left) 🍴
+🍴 10 116 has taken a fork (right) 🍴
+🍽️  10 116 is eating 🍽️
+🍴 10 118 has taken a fork (left) 🍴
+🍴 10 118 has taken a fork (right) 🍴
+🍽️  10 118 is eating 🍽️
+🍴 10 120 has taken a fork (left) 🍴
+🍴 10 120 has taken a fork (right) 🍴
+🍽️  10 120 is eating 🍽️
+🍴 10 122 has taken a fork (left) 🍴
+🍴 10 122 has taken a fork (right) 🍴
+🍽️  10 122 is eating 🍽️
+🍴 11 124 has taken a fork (left) 🍴
+🍴 11 124 has taken a fork (right) 🍴
+🍽️  11 124 is eating 🍽️
+🍴 11 126 has taken a fork (left) 🍴
+🍴 11 126 has taken a fork (right) 🍴
+🍽️  11 126 is eating 🍽️
+🍴 11 128 has taken a fork (left) 🍴
+🍴 11 128 has taken a fork (right) 🍴
+🍽️  11 128 is eating 🍽️
+🍴 11 130 has taken a fork (left) 🍴
+🍴 11 130 has taken a fork (right) 🍴
+🍽️  11 130 is eating 🍽️
+🍴 11 132 has taken a fork (left) 🍴
+🍴 11 132 has taken a fork (right) 🍴
+🍽️  11 132 is eating 🍽️
+🍴 11 134 has taken a fork (left) 🍴
+🍴 11 134 has taken a fork (right) 🍴
+🍽️  11 134 is eating 🍽️
+🍴 11 136 has taken a fork (left) 🍴
+🍴 11 136 has taken a fork (right) 🍴
+🍽️  11 136 is eating 🍽️
+🍴 12 138 has taken a fork (left) 🍴
+🍴 12 138 has taken a fork (right) 🍴
+🍽️  12 138 is eating 🍽️
+🍴 12 140 has taken a fork (left) 🍴
+🍴 12 140 has taken a fork (right) 🍴
+🍽️  12 140 is eating 🍽️
+🍴 14 142 has taken a fork (left) 🍴
+🍴 14 142 has taken a fork (right) 🍴
+🍽️  14 142 is eating 🍽️
+🍴 14 144 has taken a fork (left) 🍴
+🍴 14 144 has taken a fork (right) 🍴
+🍽️  14 144 is eating 🍽️
+🍴 14 146 has taken a fork (left) 🍴
+🍴 14 146 has taken a fork (right) 🍴
+🍽️  14 146 is eating 🍽️
+🍴 14 152 has taken a fork (left) 🍴
+🍴 14 150 has taken a fork (left) 🍴
+🍴 14 150 has taken a fork (right) 🍴
+🍽️  14 150 is eating 🍽️
+🍴 14 148 has taken a fork (left) 🍴
+🍴 14 152 has taken a fork (right) 🍴
+🍽️  14 152 is eating 🍽️
+🍴 14 148 has taken a fork (right) 🍴
+🍽️  14 148 is eating 🍽️
+🍴 14 154 has taken a fork (left) 🍴
+🍴 14 154 has taken a fork (right) 🍴
+🍽️  14 154 is eating 🍽️
+🍴 15 156 has taken a fork (left) 🍴
+🍴 15 156 has taken a fork (right) 🍴
+🍽️  15 156 is eating 🍽️
+🍴 15 158 has taken a fork (left) 🍴
+🍴 15 158 has taken a fork (right) 🍴
+🍽️  15 158 is eating 🍽️
+🍴 15 160 has taken a fork (left) 🍴
+🍴 15 160 has taken a fork (right) 🍴
+🍽️  15 160 is eating 🍽️
+🍴 15 162 has taken a fork (left) 🍴
+🍴 15 162 has taken a fork (right) 🍴
+🍽️  15 162 is eating 🍽️
+🍴 15 164 has taken a fork (left) 🍴
+🍴 15 164 has taken a fork (right) 🍴
+🍽️  15 164 is eating 🍽️
+🍴 15 166 has taken a fork (left) 🍴
+🍴 15 166 has taken a fork (right) 🍴
+🍽️  15 166 is eating 🍽️
+🍴 15 168 has taken a fork (left) 🍴
+🍴 15 168 has taken a fork (right) 🍴
+🍽️  15 168 is eating 🍽️
+🍴 16 170 has taken a fork (left) 🍴
+🍴 16 170 has taken a fork (right) 🍴
+🍽️  16 170 is eating 🍽️
+🍴 16 172 has taken a fork (left) 🍴
+🍴 16 172 has taken a fork (right) 🍴
+🍽️  16 172 is eating 🍽️
+🍴 16 174 has taken a fork (left) 🍴
+🍴 16 174 has taken a fork (right) 🍴
+🍽️  16 174 is eating 🍽️
+🍴 16 176 has taken a fork (left) 🍴
+🍴 16 176 has taken a fork (right) 🍴
+🍽️  16 176 is eating 🍽️
+🍴 16 178 has taken a fork (left) 🍴
+🍴 16 178 has taken a fork (right) 🍴
+🍽️  16 178 is eating 🍽️
+🍴 16 180 has taken a fork (left) 🍴
+🍴 16 180 has taken a fork (right) 🍴
+🍽️  16 180 is eating 🍽️
+🍴 16 182 has taken a fork (left) 🍴
+🍴 16 182 has taken a fork (right) 🍴
+🍽️  16 182 is eating 🍽️
+🍴 16 184 has taken a fork (left) 🍴
+🍴 16 184 has taken a fork (right) 🍴
+🍽️  16 184 is eating 🍽️
+🍴 17 186 has taken a fork (left) 🍴
+🍴 17 186 has taken a fork (right) 🍴
+🍽️  17 186 is eating 🍽️
+🍴 17 188 has taken a fork (left) 🍴
+🍴 17 188 has taken a fork (right) 🍴
+🍽️  17 188 is eating 🍽️
+🍴 17 190 has taken a fork (left) 🍴
+🍴 17 190 has taken a fork (right) 🍴
+🍽️  17 190 is eating 🍽️
+🍴 17 192 has taken a fork (left) 🍴
+🍴 17 192 has taken a fork (right) 🍴
+🍽️  17 192 is eating 🍽️
+🍴 17 194 has taken a fork (left) 🍴
+🍴 17 194 has taken a fork (right) 🍴
+🍽️  17 194 is eating 🍽️
+🍴 17 196 has taken a fork (left) 🍴
+🍴 17 196 has taken a fork (right) 🍴
+🍽️  17 196 is eating 🍽️
+🍴 17 198 has taken a fork (left) 🍴
+🍴 17 198 has taken a fork (right) 🍴
+🍽️  17 198 is eating 🍽️
+🍴 19 199 has taken a fork (right) 🍴
+🛌 202 2 is sleeping 🛌
+🛌 202 4 is sleeping 🛌
+🍴 202 1 has taken a fork (right) 🍴
+🍴 202 1 has taken a fork (left) 🍴
+🍽️  202 1 is eating 🍽️
+🍴 202 3 has taken a fork (right) 🍴
+🍴 202 3 has taken a fork (left) 🍴
+🛌 202 6 is sleeping 🛌
+🍽️  202 3 is eating 🍽️
+🍴 202 5 has taken a fork (right) 🍴
+🍴 202 5 has taken a fork (left) 🍴
+🍽️  202 5 is eating 🍽️
+🛌 202 8 is sleeping 🛌
+🍴 202 7 has taken a fork (right) 🍴
+🍴 202 7 has taken a fork (left) 🍴
+🍽️  202 7 is eating 🍽️
+🛌 202 10 is sleeping 🛌
+🍴 202 9 has taken a fork (right) 🍴
+🍴 202 9 has taken a fork (left) 🍴
+🍽️  202 9 is eating 🍽️
+🛌 203 14 is sleeping 🛌
+🛌 203 12 is sleeping 🛌
+🍴 203 13 has taken a fork (right) 🍴
+🍴 203 13 has taken a fork (left) 🍴
+🍽️  203 13 is eating 🍽️
+🍴 203 11 has taken a fork (right) 🍴
+🍴 203 11 has taken a fork (left) 🍴
+🍽️  203 11 is eating 🍽️
+🛌 203 18 is sleeping 🛌
+🛌 203 20 is sleeping 🛌
+🍴 203 17 has taken a fork (right) 🍴
+🍴 203 19 has taken a fork (right) 🍴
+🍴 203 19 has taken a fork (left) 🍴
+🍽️  203 19 is eating 🍽️
+🛌 203 22 is sleeping 🛌
+🍴 203 21 has taken a fork (right) 🍴
+🍴 203 21 has taken a fork (left) 🍴
+🍽️  203 21 is eating 🍽️
+🛌 203 26 is sleeping 🛌
+🛌 203 24 is sleeping 🛌
+🍴 203 23 has taken a fork (right) 🍴
+🍴 203 23 has taken a fork (left) 🍴
+🍽️  203 23 is eating 🍽️
+🍴 203 25 has taken a fork (right) 🍴
+🍴 203 25 has taken a fork (left) 🍴
+🍽️  203 25 is eating 🍽️
+🛌 204 28 is sleeping 🛌
+🛌 204 30 is sleeping 🛌
+🍴 204 27 has taken a fork (right) 🍴
+🍴 204 27 has taken a fork (left) 🍴
+🍽️  204 27 is eating 🍽️
+🍴 204 29 has taken a fork (right) 🍴
+🍴 204 29 has taken a fork (left) 🍴
+🍽️  204 29 is eating 🍽️
+🛌 204 32 is sleeping 🛌
+🍴 204 31 has taken a fork (right) 🍴
+🍴 204 31 has taken a fork (left) 🍴
+🍽️  204 31 is eating 🍽️
+🛌 204 34 is sleeping 🛌
+🍴 204 33 has taken a fork (right) 🍴
+🍴 204 33 has taken a fork (left) 🍴
+🍽️  204 33 is eating 🍽️
+🛌 204 36 is sleeping 🛌
+🍴 204 35 has taken a fork (right) 🍴
+🍴 204 35 has taken a fork (left) 🍴
+🍽️  204 35 is eating 🍽️
+🛌 205 40 is sleeping 🛌
+🍴 205 39 has taken a fork (right) 🍴
+🛌 205 38 is sleeping 🛌
+🛌 205 42 is sleeping 🛌
+🍴 205 37 has taken a fork (right) 🍴
+🍴 205 37 has taken a fork (left) 🍴
+🍴 205 41 has taken a fork (right) 🍴
+🍴 205 41 has taken a fork (left) 🍴
+🍽️  205 41 is eating 🍽️
+🍴 205 39 has taken a fork (left) 🍴
+🍽️  205 39 is eating 🍽️
+🍽️  205 37 is eating 🍽️
+🛌 205 44 is sleeping 🛌
+🍴 205 43 has taken a fork (right) 🍴
+🍴 205 43 has taken a fork (left) 🍴
+🍽️  205 43 is eating 🍽️
+🛌 205 46 is sleeping 🛌
+🍴 205 45 has taken a fork (right) 🍴
+🍴 205 45 has taken a fork (left) 🍴
+🍽️  205 45 is eating 🍽️
+🛌 205 50 is sleeping 🛌
+🛌 205 52 is sleeping 🛌
+🍴 205 49 has taken a fork (right) 🍴
+🛌 205 54 is sleeping 🛌
+🍴 205 51 has taken a fork (right) 🍴
+🍴 205 51 has taken a fork (left) 🍴
+🍽️  205 51 is eating 🍽️
+🍴 205 53 has taken a fork (right) 🍴
+🍴 205 53 has taken a fork (left) 🍴
+🍽️  205 53 is eating 🍽️
+🛌 205 16 is sleeping 🛌
+🍴 205 17 has taken a fork (left) 🍴
+🍽️  205 17 is eating 🍽️
+🛌 205 48 is sleeping 🛌
+🍴 205 49 has taken a fork (left) 🍴
+🍽️  205 49 is eating 🍽️
+🍴 205 47 has taken a fork (right) 🍴
+🍴 205 47 has taken a fork (left) 🍴
+🍽️  205 47 is eating 🍽️
+🍴 205 15 has taken a fork (right) 🍴
+🍴 205 15 has taken a fork (left) 🍴
+🍽️  205 15 is eating 🍽️
+🛌 205 56 is sleeping 🛌
+🍴 205 55 has taken a fork (right) 🍴
+🍴 205 55 has taken a fork (left) 🍴
+🍽️  205 55 is eating 🍽️
+🛌 205 58 is sleeping 🛌
+🍴 206 57 has taken a fork (right) 🍴
+🍴 206 57 has taken a fork (left) 🍴
+🍽️  206 57 is eating 🍽️
+🛌 206 60 is sleeping 🛌
+🍴 206 59 has taken a fork (right) 🍴
+🍴 206 59 has taken a fork (left) 🍴
+🍽️  206 59 is eating 🍽️
+🛌 206 62 is sleeping 🛌
+🍴 206 61 has taken a fork (right) 🍴
+🍴 206 61 has taken a fork (left) 🍴
+🍽️  206 61 is eating 🍽️
+🛌 206 64 is sleeping 🛌
+🍴 206 63 has taken a fork (right) 🍴
+🍴 206 63 has taken a fork (left) 🍴
+🍽️  206 63 is eating 🍽️
+🛌 206 68 is sleeping 🛌
+🍴 206 67 has taken a fork (right) 🍴
+🛌 207 70 is sleeping 🛌
+🍴 207 69 has taken a fork (right) 🍴
+🍴 207 69 has taken a fork (left) 🍴
+🍽️  207 69 is eating 🍽️
+🛌 207 72 is sleeping 🛌
+🍴 207 71 has taken a fork (right) 🍴
+🍴 207 71 has taken a fork (left) 🍴
+🍽️  207 71 is eating 🍽️
+🛌 207 66 is sleeping 🛌
+🍴 207 67 has taken a fork (left) 🍴
+🍽️  207 67 is eating 🍽️
+🍴 207 65 has taken a fork (right) 🍴
+🍴 207 65 has taken a fork (left) 🍴
+🍽️  207 65 is eating 🍽️
+🛌 208 74 is sleeping 🛌
+🍴 208 73 has taken a fork (right) 🍴
+🍴 208 73 has taken a fork (left) 🍴
+🍽️  208 73 is eating 🍽️
+🛌 208 76 is sleeping 🛌
+🍴 208 75 has taken a fork (right) 🍴
+🍴 208 75 has taken a fork (left) 🍴
+🍽️  208 75 is eating 🍽️
+🛌 208 78 is sleeping 🛌
+🍴 208 77 has taken a fork (right) 🍴
+🍴 208 77 has taken a fork (left) 🍴
+🍽️  208 77 is eating 🍽️
+🛌 208 80 is sleeping 🛌
+🛌 208 82 is sleeping 🛌
+🍴 208 81 has taken a fork (right) 🍴
+🍴 208 81 has taken a fork (left) 🍴
+🍽️  208 81 is eating 🍽️
+🍴 208 79 has taken a fork (right) 🍴
+🍴 208 79 has taken a fork (left) 🍴
+🍽️  208 79 is eating 🍽️
+🛌 208 86 is sleeping 🛌
+🛌 208 84 is sleeping 🛌
+🍴 208 85 has taken a fork (right) 🍴
+🍴 209 85 has taken a fork (left) 🍴
+🍽️  209 85 is eating 🍽️
+🍴 209 83 has taken a fork (right) 🍴
+🍴 209 83 has taken a fork (left) 🍴
+🍽️  209 83 is eating 🍽️
+🛌 209 88 is sleeping 🛌
+🍴 209 87 has taken a fork (right) 🍴
+🍴 209 87 has taken a fork (left) 🍴
+🍽️  209 87 is eating 🍽️
+🛌 209 90 is sleeping 🛌
+🍴 209 89 has taken a fork (right) 🍴
+🍴 209 89 has taken a fork (left) 🍴
+🍽️  209 89 is eating 🍽️
+🛌 209 92 is sleeping 🛌
+🍴 209 91 has taken a fork (right) 🍴
+🍴 209 91 has taken a fork (left) 🍴
+🍽️  209 91 is eating 🍽️
+🛌 209 94 is sleeping 🛌
+🍴 209 93 has taken a fork (right) 🍴
+🍴 209 93 has taken a fork (left) 🍴
+🍽️  209 93 is eating 🍽️
+🛌 209 96 is sleeping 🛌
+🛌 209 98 is sleeping 🛌
+🍴 209 95 has taken a fork (right) 🍴
+🍴 209 95 has taken a fork (left) 🍴
+🍽️  209 95 is eating 🍽️
+🍴 209 97 has taken a fork (right) 🍴
+🍴 209 97 has taken a fork (left) 🍴
+🍽️  209 97 is eating 🍽️
+🛌 210 100 is sleeping 🛌
+🍴 210 99 has taken a fork (right) 🍴
+🍴 210 99 has taken a fork (left) 🍴
+🍽️  210 99 is eating 🍽️
+🛌 210 102 is sleeping 🛌
+🍴 210 101 has taken a fork (right) 🍴
+🍴 210 101 has taken a fork (left) 🍴
+🍽️  210 101 is eating 🍽️
+🛌 210 104 is sleeping 🛌
+🍴 210 103 has taken a fork (right) 🍴
+🍴 210 103 has taken a fork (left) 🍴
+🍽️  210 103 is eating 🍽️
+🛌 210 108 is sleeping 🛌
+🛌 210 110 is sleeping 🛌
+🍴 210 107 has taken a fork (right) 🍴
+🍴 210 109 has taken a fork (right) 🍴
+🍴 210 109 has taken a fork (left) 🍴
+🍽️  210 109 is eating 🍽️
+🛌 211 112 is sleeping 🛌
+🍴 211 111 has taken a fork (right) 🍴
+🍴 211 111 has taken a fork (left) 🍴
+🍽️  211 111 is eating 🍽️
+🛌 211 114 is sleeping 🛌
+🍴 211 113 has taken a fork (right) 🍴
+🍴 211 113 has taken a fork (left) 🍴
+🍽️  211 113 is eating 🍽️
+🛌 211 106 is sleeping 🛌
+🍴 211 105 has taken a fork (right) 🍴
+🍴 211 105 has taken a fork (left) 🍴
+🍽️  211 105 is eating 🍽️
+🍴 211 107 has taken a fork (left) 🍴
+🍽️  211 107 is eating 🍽️
+🛌 211 122 is sleeping 🛌
+🍴 211 121 has taken a fork (right) 🍴
+🛌 211 118 is sleeping 🛌
+🍴 211 117 has taken a fork (right) 🍴
+🛌 212 126 is sleeping 🛌
+🛌 212 124 is sleeping 🛌
+🍴 212 125 has taken a fork (right) 🍴
+🍴 212 125 has taken a fork (left) 🍴
+🍽️  212 125 is eating 🍽️
+🍴 212 123 has taken a fork (right) 🍴
+🍴 212 123 has taken a fork (left) 🍴
+🍽️  212 123 is eating 🍽️
+🛌 212 128 is sleeping 🛌
+🍴 212 127 has taken a fork (right) 🍴
+🍴 212 127 has taken a fork (left) 🍴
+🍽️  212 127 is eating 🍽️
+🛌 212 130 is sleeping 🛌
+🍴 212 129 has taken a fork (right) 🍴
+🍴 212 129 has taken a fork (left) 🍴
+🍽️  212 129 is eating 🍽️
+🛌 212 134 is sleeping 🛌
+🛌 212 120 is sleeping 🛌
+🍴 212 133 has taken a fork (right) 🍴
+🍴 212 119 has taken a fork (right) 🍴
+🍴 212 119 has taken a fork (left) 🍴
+🍽️  212 119 is eating 🍽️
+🛌 212 132 is sleeping 🛌
+🍴 212 121 has taken a fork (left) 🍴
+🛌 212 116 is sleeping 🛌
+🍽️  212 121 is eating 🍽️
+🍴 212 131 has taken a fork (right) 🍴
+🍴 212 117 has taken a fork (left) 🍴
+🍴 212 131 has taken a fork (left) 🍴
+🍽️  212 131 is eating 🍽️
+🍽️  212 117 is eating 🍽️
+🍴 212 133 has taken a fork (left) 🍴
+🍽️  212 133 is eating 🍽️
+🍴 212 115 has taken a fork (right) 🍴
+🍴 212 115 has taken a fork (left) 🍴
+🛌 212 136 is sleeping 🛌
+🍽️  212 115 is eating 🍽️
+🍴 212 135 has taken a fork (right) 🍴
+🍴 212 135 has taken a fork (left) 🍴
+🍽️  212 135 is eating 🍽️
+🛌 213 138 is sleeping 🛌
+🍴 213 137 has taken a fork (right) 🍴
+🍴 213 137 has taken a fork (left) 🍴
+🍽️  213 137 is eating 🍽️
+🛌 213 140 is sleeping 🛌
+🍴 213 139 has taken a fork (right) 🍴
+🍴 213 139 has taken a fork (left) 🍴
+🍽️  213 139 is eating 🍽️
+🛌 215 142 is sleeping 🛌
+🍴 215 141 has taken a fork (right) 🍴
+🍴 215 141 has taken a fork (left) 🍴
+🍽️  215 141 is eating 🍽️
+🛌 215 144 is sleeping 🛌
+🍴 215 143 has taken a fork (right) 🍴
+🍴 215 143 has taken a fork (left) 🍴
+🍽️  215 143 is eating 🍽️
+🛌 215 148 is sleeping 🛌
+🍴 215 147 has taken a fork (right) 🍴
+🛌 215 154 is sleeping 🛌
+🍴 215 153 has taken a fork (right) 🍴
+🛌 215 152 is sleeping 🛌
+🍴 215 153 has taken a fork (left) 🍴
+🍽️  215 153 is eating 🍽️
+🛌 215 146 is sleeping 🛌
+🍴 215 151 has taken a fork (right) 🍴
+🍴 215 151 has taken a fork (left) 🍴
+🛌 215 150 is sleeping 🛌
+🍴 215 147 has taken a fork (left) 🍴
+🍴 215 145 has taken a fork (right) 🍴
+🍴 215 145 has taken a fork (left) 🍴
+🍽️  215 145 is eating 🍽️
+🍽️  215 147 is eating 🍽️
+🍽️  215 151 is eating 🍽️
+🍴 215 149 has taken a fork (right) 🍴
+🍴 215 149 has taken a fork (left) 🍴
+🍽️  215 149 is eating 🍽️
+🛌 215 158 is sleeping 🛌
+🍴 216 157 has taken a fork (right) 🍴
+🛌 216 156 is sleeping 🛌
+🍴 216 155 has taken a fork (right) 🍴
+🍴 216 155 has taken a fork (left) 🍴
+🍴 216 157 has taken a fork (left) 🍴
+🍽️  216 157 is eating 🍽️
+🍽️  216 155 is eating 🍽️
+🛌 216 164 is sleeping 🛌
+🛌 216 162 is sleeping 🛌
+🛌 216 170 is sleeping 🛌
+🛌 216 160 is sleeping 🛌
+🍴 216 159 has taken a fork (right) 🍴
+🍴 216 159 has taken a fork (left) 🍴
+🍽️  216 159 is eating 🍽️
+🛌 216 168 is sleeping 🛌
+🍴 216 163 has taken a fork (right) 🍴
+🍴 216 163 has taken a fork (left) 🍴
+🍽️  216 163 is eating 🍽️
+🍴 216 167 has taken a fork (right) 🍴
+🍴 216 161 has taken a fork (right) 🍴
+🍴 216 161 has taken a fork (left) 🍴
+🍽️  216 161 is eating 🍽️
+🛌 216 166 is sleeping 🛌
+🍴 216 165 has taken a fork (right) 🍴
+🍴 216 167 has taken a fork (left) 🍴
+🍴 216 169 has taken a fork (right) 🍴
+🍽️  216 167 is eating 🍽️
+🍴 216 165 has taken a fork (left) 🍴
+🍴 216 169 has taken a fork (left) 🍴
+🍽️  216 165 is eating 🍽️
+🍽️  216 169 is eating 🍽️
+🛌 217 172 is sleeping 🛌
+🍴 217 171 has taken a fork (right) 🍴
+🍴 217 171 has taken a fork (left) 🍴
+🍽️  217 171 is eating 🍽️
+🛌 217 176 is sleeping 🛌
+🍴 217 175 has taken a fork (right) 🍴
+🛌 217 178 is sleeping 🛌
+🛌 217 180 is sleeping 🛌
+🍴 217 177 has taken a fork (right) 🍴
+🍴 217 179 has taken a fork (right) 🍴
+🍴 217 177 has taken a fork (left) 🍴
+🍽️  217 177 is eating 🍽️
+🍴 217 179 has taken a fork (left) 🍴
+🍽️  217 179 is eating 🍽️
+🛌 217 174 is sleeping 🛌
+🍴 217 173 has taken a fork (right) 🍴
+🍴 217 173 has taken a fork (left) 🍴
+🛌 217 182 is sleeping 🛌
+🍽️  217 173 is eating 🍽️
+🍴 217 175 has taken a fork (left) 🍴
+🍽️  217 175 is eating 🍽️
+🍴 217 181 has taken a fork (right) 🍴
+🍴 217 181 has taken a fork (left) 🍴
+🍽️  217 181 is eating 🍽️
+🛌 217 186 is sleeping 🛌
+🛌 217 184 is sleeping 🛌
+🍴 217 183 has taken a fork (right) 🍴
+🍴 217 183 has taken a fork (left) 🍴
+🍽️  217 183 is eating 🍽️
+🍴 217 185 has taken a fork (right) 🍴
+🍴 217 185 has taken a fork (left) 🍴
+🍽️  217 185 is eating 🍽️
+🛌 217 188 is sleeping 🛌
+🍴 218 187 has taken a fork (right) 🍴
+🍴 218 187 has taken a fork (left) 🍴
+🍽️  218 187 is eating 🍽️
+🛌 218 190 is sleeping 🛌
+🍴 218 189 has taken a fork (right) 🍴
+🍴 218 189 has taken a fork (left) 🍴
+🍽️  218 189 is eating 🍽️
+🛌 218 192 is sleeping 🛌
+🍴 218 191 has taken a fork (right) 🍴
+🍴 218 191 has taken a fork (left) 🍴
+🍽️  218 191 is eating 🍽️
+🛌 218 194 is sleeping 🛌
+🍴 218 193 has taken a fork (right) 🍴
+🍴 218 193 has taken a fork (left) 🍴
+🍽️  218 193 is eating 🍽️
+🛌 218 198 is sleeping 🛌
+🍴 218 199 has taken a fork (left) 🍴
+🍽️  218 199 is eating 🍽️
+🛌 218 196 is sleeping 🛌
+🍴 218 197 has taken a fork (right) 🍴
+🍴 218 197 has taken a fork (left) 🍴
+🍽️  218 197 is eating 🍽️
+🍴 218 195 has taken a fork (right) 🍴
+🍴 218 195 has taken a fork (left) 🍴
+🍽️  218 195 is eating 🍽️
+🛌 403 1 is sleeping 🛌
+🧑 403 6 is thinking 🧑
+🍴 403 6 has taken a fork (left) 🍴
+🛌 403 5 is sleeping 🛌
+🧑 403 4 is thinking 🧑
+🛌 403 3 is sleeping 🛌
+🍴 403 4 has taken a fork (left) 🍴
+🍴 403 4 has taken a fork (right) 🍴
+🍽️  403 4 is eating 🍽️
+🧑 403 2 is thinking 🧑
+🍴 403 2 has taken a fork (left) 🍴
+🍴 403 2 has taken a fork (right) 🍴
+🍽️  403 2 is eating 🍽️
+🧑 403 8 is thinking 🧑
+🍴 403 8 has taken a fork (left) 🍴
+🛌 403 7 is sleeping 🛌
+🧑 403 10 is thinking 🧑
+🍴 403 6 has taken a fork (right) 🍴
+🍽️  403 6 is eating 🍽️
+🛌 403 9 is sleeping 🛌
+🍴 403 8 has taken a fork (right) 🍴
+🍽️  403 8 is eating 🍽️
+🍴 403 10 has taken a fork (left) 🍴
+🧑 403 14 is thinking 🧑
+🛌 404 11 is sleeping 🛌
+🍴 404 10 has taken a fork (right) 🍴
+🍽️  404 10 is eating 🍽️
+🛌 404 13 is sleeping 🛌
+🧑 404 12 is thinking 🧑
+🍴 404 12 has taken a fork (left) 🍴
+🍴 404 12 has taken a fork (right) 🍴
+🍽️  404 12 is eating 🍽️
+🍴 404 14 has taken a fork (left) 🍴
+🧑 404 20 is thinking 🧑
+🧑 404 18 is thinking 🧑
+🛌 404 21 is sleeping 🛌
+🛌 404 19 is sleeping 🛌
+🍴 404 20 has taken a fork (left) 🍴
+🍴 404 20 has taken a fork (right) 🍴
+🍽️  404 20 is eating 🍽️
+🧑 404 22 is thinking 🧑
+🍴 404 22 has taken a fork (left) 🍴
+🧑 404 26 is thinking 🧑
+🛌 404 25 is sleeping 🛌
+🧑 404 24 is thinking 🧑
+🍴 404 26 has taken a fork (left) 🍴
+🛌 404 23 is sleeping 🛌
+🍴 404 24 has taken a fork (left) 🍴
+🍴 404 22 has taken a fork (right) 🍴
+🍽️  404 22 is eating 🍽️
+🍴 404 24 has taken a fork (right) 🍴
+🍽️  404 24 is eating 🍽️
+🧑 404 28 is thinking 🧑
+🛌 404 29 is sleeping 🛌
+🛌 404 27 is sleeping 🛌
+🍴 404 26 has taken a fork (right) 🍴
+🍽️  404 26 is eating 🍽️
+🍴 405 28 has taken a fork (left) 🍴
+🧑 405 32 is thinking 🧑
+🍴 405 28 has taken a fork (right) 🍴
+🍽️  405 28 is eating 🍽️
+🧑 405 30 is thinking 🧑
+🍴 405 30 has taken a fork (left) 🍴
+🛌 405 31 is sleeping 🛌
+🍴 405 30 has taken a fork (right) 🍴
+🍽️  405 30 is eating 🍽️
+🍴 405 32 has taken a fork (left) 🍴
+🧑 405 34 is thinking 🧑
+🛌 405 35 is sleeping 🛌
+🧑 405 36 is thinking 🧑
+🍴 405 36 has taken a fork (left) 🍴
+🛌 405 33 is sleeping 🛌
+🍴 405 32 has taken a fork (right) 🍴
+🍽️  405 32 is eating 🍽️
+🍴 405 34 has taken a fork (left) 🍴
+🍴 405 34 has taken a fork (right) 🍴
+🍽️  405 34 is eating 🍽️
+🛌 405 41 is sleeping 🛌
+🧑 405 40 is thinking 🧑
+🧑 405 38 is thinking 🧑
+🛌 405 39 is sleeping 🛌
+🧑 405 42 is thinking 🧑
+🍴 405 42 has taken a fork (left) 🍴
+🛌 405 37 is sleeping 🛌
+🍴 406 36 has taken a fork (right) 🍴
+🛌 406 43 is sleeping 🛌
+🍽️  406 36 is eating 🍽️
+🍴 406 42 has taken a fork (right) 🍴
+🍽️  406 42 is eating 🍽️
+🧑 406 44 is thinking 🧑
+🍴 406 44 has taken a fork (left) 🍴
+🍴 406 40 has taken a fork (left) 🍴
+🍴 406 40 has taken a fork (right) 🍴
+🍽️  406 40 is eating 🍽️
+🍴 406 38 has taken a fork (left) 🍴
+🍴 406 38 has taken a fork (right) 🍴
+🍽️  406 38 is eating 🍽️
+🧑 406 46 is thinking 🧑
+🧑 406 48 is thinking 🧑
+🛌 406 45 is sleeping 🛌
+🍴 406 44 has taken a fork (right) 🍴
+🍽️  406 44 is eating 🍽️
+🍴 406 46 has taken a fork (left) 🍴
+🧑 406 54 is thinking 🧑
+🧑 406 52 is thinking 🧑
+🛌 406 47 is sleeping 🛌
+🛌 406 49 is sleeping 🛌
+🍴 406 46 has taken a fork (right) 🍴
+🍽️  406 46 is eating 🍽️
+🧑 406 16 is thinking 🧑
+🧑 406 50 is thinking 🧑
+🛌 406 53 is sleeping 🛌
+🛌 406 51 is sleeping 🛌
+🍴 406 50 has taken a fork (left) 🍴
+🍴 406 50 has taken a fork (right) 🍴
+🍽️  406 50 is eating 🍽️
+🍴 406 54 has taken a fork (left) 🍴
+🍴 406 48 has taken a fork (left) 🍴
+🍴 406 48 has taken a fork (right) 🍴
+🍽️  406 48 is eating 🍽️
+🛌 406 17 is sleeping 🛌
+🍴 406 52 has taken a fork (left) 🍴
+🍴 406 52 has taken a fork (right) 🍴
+🍽️  406 52 is eating 🍽️
+🍴 406 18 has taken a fork (left) 🍴
+🍴 406 18 has taken a fork (right) 🍴
+🍽️  406 18 is eating 🍽️
+🧑 406 56 is thinking 🧑
+🛌 406 15 is sleeping 🛌
+🛌 406 55 is sleeping 🛌
+🍴 406 56 has taken a fork (left) 🍴
+🍴 406 16 has taken a fork (left) 🍴
+🍴 406 16 has taken a fork (right) 🍴
+🍴 406 14 has taken a fork (right) 🍴
+🍽️  406 14 is eating 🍽️
+🍽️  406 16 is eating 🍽️
+🍴 406 54 has taken a fork (right) 🍴
+🍽️  406 54 is eating 🍽️
+🧑 406 58 is thinking 🧑
+🧑 406 60 is thinking 🧑
+🛌 406 59 is sleeping 🛌
+🍴 406 60 has taken a fork (left) 🍴
+🛌 406 57 is sleeping 🛌
+🍴 406 58 has taken a fork (left) 🍴
+🍴 406 58 has taken a fork (right) 🍴
+🍽️  406 58 is eating 🍽️
+🍴 406 56 has taken a fork (right) 🍴
+🍽️  406 56 is eating 🍽️
+🧑 407 64 is thinking 🧑
+🛌 407 63 is sleeping 🛌
+🧑 407 62 is thinking 🧑
+🍴 407 64 has taken a fork (left) 🍴
+🛌 407 61 is sleeping 🛌
+🍴 407 62 has taken a fork (left) 🍴
+🍴 407 62 has taken a fork (right) 🍴
+🍽️  407 62 is eating 🍽️
+🍴 407 60 has taken a fork (right) 🍴
+🍽️  407 60 is eating 🍽️
+🧑 407 68 is thinking 🧑
+🛌 408 69 is sleeping 🛌
+🧑 408 70 is thinking 🧑
+🍴 408 70 has taken a fork (left) 🍴
+🛌 408 71 is sleeping 🛌
+🍴 408 70 has taken a fork (right) 🍴
+🍽️  408 70 is eating 🍽️
+🧑 408 72 is thinking 🧑
+🍴 408 72 has taken a fork (left) 🍴
+🧑 408 66 is thinking 🧑
+🛌 408 65 is sleeping 🛌
+🛌 408 67 is sleeping 🛌
+🍴 408 68 has taken a fork (left) 🍴
+🍴 408 66 has taken a fork (left) 🍴
+🍴 408 66 has taken a fork (right) 🍴
+🍽️  408 66 is eating 🍽️
+🍴 408 68 has taken a fork (right) 🍴
+🍽️  408 68 is eating 🍽️
+🍴 408 64 has taken a fork (right) 🍴
+🍽️  408 64 is eating 🍽️
+🧑 409 74 is thinking 🧑
+🍴 409 74 has taken a fork (left) 🍴
+🛌 409 73 is sleeping 🛌
+🍴 409 72 has taken a fork (right) 🍴
+🍽️  409 72 is eating 🍽️
+🧑 409 76 is thinking 🧑
+🛌 409 75 is sleeping 🛌
+🍴 409 76 has taken a fork (left) 🍴
+🍴 409 74 has taken a fork (right) 🍴
+🍽️  409 74 is eating 🍽️
+🧑 409 78 is thinking 🧑
+🧑 409 82 is thinking 🧑
+🛌 409 81 is sleeping 🛌
+🧑 409 80 is thinking 🧑
+🍴 409 76 has taken a fork (right) 🍴
+🍽️  409 76 is eating 🍽️
+🛌 409 77 is sleeping 🛌
+🛌 409 79 is sleeping 🛌
+🍴 409 80 has taken a fork (left) 🍴
+🍴 409 80 has taken a fork (right) 🍴
+🍽️  409 80 is eating 🍽️
+🍴 409 82 has taken a fork (left) 🍴
+🍴 409 78 has taken a fork (left) 🍴
+🍴 409 78 has taken a fork (right) 🍴
+🍽️  409 78 is eating 🍽️
+🧑 409 86 is thinking 🧑
+🧑 409 84 is thinking 🧑
+🛌 409 85 is sleeping 🛌
+🍴 409 86 has taken a fork (left) 🍴
+🛌 409 83 is sleeping 🛌
+🧑 409 88 is thinking 🧑
+🍴 409 84 has taken a fork (left) 🍴
+🍴 409 84 has taken a fork (right) 🍴
+🍽️  409 84 is eating 🍽️
+🍴 409 86 has taken a fork (right) 🍴
+🍽️  409 86 is eating 🍽️
+🛌 409 87 is sleeping 🛌
+🛌 409 89 is sleeping 🛌
+🍴 409 88 has taken a fork (left) 🍴
+🍴 409 88 has taken a fork (right) 🍴
+🍽️  409 88 is eating 🍽️
+🍴 409 82 has taken a fork (right) 🍴
+🍽️  409 82 is eating 🍽️
+🧑 409 92 is thinking 🧑
+🧑 410 90 is thinking 🧑
+🍴 410 90 has taken a fork (left) 🍴
+🛌 410 91 is sleeping 🛌
+🍴 410 90 has taken a fork (right) 🍴
+🍽️  410 90 is eating 🍽️
+🍴 410 92 has taken a fork (left) 🍴
+🧑 410 94 is thinking 🧑
+🛌 410 93 is sleeping 🛌
+🍴 410 92 has taken a fork (right) 🍴
+🍽️  410 92 is eating 🍽️
+🍴 410 94 has taken a fork (left) 🍴
+🧑 410 96 is thinking 🧑
+🛌 410 97 is sleeping 🛌
+🧑 410 98 is thinking 🧑
+🍴 410 98 has taken a fork (left) 🍴
+🍴 410 94 has taken a fork (right) 🍴
+🍽️  410 94 is eating 🍽️
+🍴 410 96 has taken a fork (left) 🍴
+🍴 410 96 has taken a fork (right) 🍴
+🍽️  410 96 is eating 🍽️
+🛌 410 95 is sleeping 🛌
+🛌 410 99 is sleeping 🛌
+🍴 410 98 has taken a fork (right) 🍴
+🍽️  410 98 is eating 🍽️
+🧑 410 100 is thinking 🧑
+🍴 410 100 has taken a fork (left) 🍴
+🛌 411 101 is sleeping 🛌
+🍴 411 100 has taken a fork (right) 🍴
+🍽️  411 100 is eating 🍽️
+🧑 411 104 is thinking 🧑
+🛌 411 109 is sleeping 🛌
+🧑 411 110 is thinking 🧑
+🧑 411 108 is thinking 🧑
+🍴 411 110 has taken a fork (left) 🍴
+🛌 411 103 is sleeping 🛌
+🍴 411 104 has taken a fork (left) 🍴
+🧑 411 112 is thinking 🧑
+🧑 411 114 is thinking 🧑
+🛌 411 111 is sleeping 🛌
+🍴 411 110 has taken a fork (right) 🍴
+🍽️  412 110 is eating 🍽️
+🛌 412 113 is sleeping 🛌
+🛌 412 105 is sleeping 🛌
+🍴 412 112 has taken a fork (left) 🍴
+🍴 412 112 has taken a fork (right) 🍴
+🍴 412 104 has taken a fork (right) 🍴
+🍽️  412 112 is eating 🍽️
+🍽️  412 104 is eating 🍽️
+🍴 412 114 has taken a fork (left) 🍴
+🛌 412 107 is sleeping 🛌
+🍴 412 108 has taken a fork (left) 🍴
+🍴 412 108 has taken a fork (right) 🍴
+🍽️  412 108 is eating 🍽️
+🧑 412 118 is thinking 🧑
+🧑 412 122 is thinking 🧑
+🧑 413 128 is thinking 🧑
+🛌 413 125 is sleeping 🛌
+🛌 413 127 is sleeping 🛌
+🛌 413 123 is sleeping 🛌
+🍴 413 128 has taken a fork (left) 🍴
+🧑 413 124 is thinking 🧑
+🍴 413 124 has taken a fork (left) 🍴
+🍴 413 124 has taken a fork (right) 🍴
+🍽️  413 124 is eating 🍽️
+🧑 413 126 is thinking 🧑
+🍴 413 126 has taken a fork (left) 🍴
+🍴 413 126 has taken a fork (right) 🍴
+🍽️  413 126 is eating 🍽️
+🛌 413 119 is sleeping 🛌
+🧑 413 134 is thinking 🧑
+🛌 413 129 is sleeping 🛌
+🛌 413 117 is sleeping 🛌
+🍴 413 128 has taken a fork (right) 🍴
+🍽️  413 128 is eating 🍽️
+🍴 413 118 has taken a fork (left) 🍴
+🍴 413 118 has taken a fork (right) 🍴
+🍽️  413 118 is eating 🍽️
+🧑 413 130 is thinking 🧑
+🍴 413 130 has taken a fork (left) 🍴
+🍴 413 130 has taken a fork (right) 🍴
+🍽️  413 130 is eating 🍽️
+🛌 413 131 is sleeping 🛌
+🧑 413 132 is thinking 🧑
+🍴 413 132 has taken a fork (left) 🍴
+🧑 413 120 is thinking 🧑
+🍴 413 120 has taken a fork (left) 🍴
+🛌 413 135 is sleeping 🛌
+🧑 413 136 is thinking 🧑
+🍴 413 136 has taken a fork (left) 🍴
+🛌 413 133 is sleeping 🛌
+🍴 413 132 has taken a fork (right) 🍴
+🍽️  413 132 is eating 🍽️
+🍴 413 134 has taken a fork (left) 🍴
+🍴 413 134 has taken a fork (right) 🍴
+🍽️  413 134 is eating 🍽️
+🧑 413 116 is thinking 🧑
+🛌 413 115 is sleeping 🛌
+🍴 413 116 has taken a fork (left) 🍴
+🍴 413 116 has taken a fork (right) 🍴
+🍴 413 114 has taken a fork (right) 🍴
+🍽️  413 116 is eating 🍽️
+🍽️  413 114 is eating 🍽️
+🧑 413 102 is thinking 🧑
+🍴 413 102 has taken a fork (left) 🍴
+🍴 413 102 has taken a fork (right) 🍴
+🍽️  413 102 is eating 🍽️
+🧑 413 106 is thinking 🧑
+🍴 413 106 has taken a fork (left) 🍴
+🍴 413 106 has taken a fork (right) 🍴
+🍽️  413 106 is eating 🍽️
+🛌 413 121 is sleeping 🛌
+🍴 413 120 has taken a fork (right) 🍴
+🍽️  413 120 is eating 🍽️
+🍴 413 122 has taken a fork (left) 🍴
+🍴 413 122 has taken a fork (right) 🍴
+🍽️  413 122 is eating 🍽️
+🧑 413 138 is thinking 🧑
+🛌 413 137 is sleeping 🛌
+🍴 413 136 has taken a fork (right) 🍴
+🍽️  413 136 is eating 🍽️
+🍴 413 138 has taken a fork (left) 🍴
+🧑 413 140 is thinking 🧑
+🛌 414 139 is sleeping 🛌
+🍴 414 138 has taken a fork (right) 🍴
+🍽️  414 138 is eating 🍽️
+🍴 414 140 has taken a fork (left) 🍴
+💀 416 200 has died 💀
